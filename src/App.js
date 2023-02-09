@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React, { useState } from 'react';
+import Cardlist from './components/Cardlist';
+
+
 
 function App() {
+  const SAMPLE_CARDS = [
+    {
+      id: 1,
+      question: 'Tekst pitanja 1',
+      answer: 'odgovr1',
+      options: [
+        'a',
+        'b',
+        'c',
+        'd'
+      ]
+    },
+
+    {
+      id: 2,
+      question: 'Tekst pitanja 2',
+      answer: 'odgovr2',
+      options: [
+        'a',
+        'b',
+        'c',
+        'd'
+      ]
+    }
+
+
+  ];
+  const [cardlist, setCardlist] = useState(SAMPLE_CARDS);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Hello world</h1>
+      <Cardlist cardlist={cardlist} />
+    </>
   );
+
+
 }
 
 export default App;
