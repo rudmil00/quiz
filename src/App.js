@@ -10,7 +10,7 @@ function App() {
     {
       id: 1,
       question: 'Tekst pitanja 1',
-      answer: 'odgovr1',
+      answer: 'odgovor1',
       options: [
         'a',
         'b',
@@ -22,7 +22,7 @@ function App() {
     {
       id: 2,
       question: 'Tekst pitanja 2',
-      answer: 'odgovr2',
+      answer: 'odgovor2',
       options: [
         'a',
         'b',
@@ -36,7 +36,7 @@ function App() {
   const [cardlist, setCardlist] = useState(SAMPLE_CARDS);
   return (
     <>
-      <h1>Hello world</h1>
+
       <Cardlist cardlist={cardlist} />
     </>
   );

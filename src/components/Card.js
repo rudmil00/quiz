@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Card = ({ card }) => {
+    const [flip, setflip] = useState(false); // okretanje kartice
     return (
-        <div>
-            {card.question}
+        <div onClick={() => setflip(!flip)} >
+            {flip ? card.answer : card.question}
+
         </div>
     );
 };
