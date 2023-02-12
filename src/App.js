@@ -7,7 +7,8 @@ import he from 'he';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from './components/About.jsx';
-import HeroSection from './components/HeroSection';
+import Footer from './components/Footer';
+
 
 function App() {
 
@@ -39,20 +40,20 @@ function App() {
     <BrowserRouter>
       <NavBar />
 
-      <div className='container'>
-        <Routes>
-          <Route
-            path="/"
-            element={<Cardlist cardlist={cardlist} />}
 
-          />
-          <Route
-            path="/about"
-            element={<About />}
+      <Routes>
+        <Route
+          path="/"
+          element={<Cardlist cardlist={cardlist} />}
 
-          />
-        </Routes>
-      </div>
+        />
+        <Route
+          path="/about"
+          element={<About />}
+
+        />
+      </Routes>
+      <Footer />
     </BrowserRouter>
   );
 
