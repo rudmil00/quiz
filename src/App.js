@@ -22,7 +22,10 @@ function App() {
       <Routes>
         <Route
           exact path="/"
-          element={<Main categories={categories} setCategories={setCategories} cardlist={cardlist} setCardlist={setCardlist} />}
+          element={<Main categories={categories}
+            setCategories={setCategories}
+            cardlist={cardlist}
+            setCardlist={setCardlist} />}
 
         />
 

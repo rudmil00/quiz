@@ -1,21 +1,20 @@
 import React from 'react';
 import Card from './Card';
 
-import '../App.css';
 
 
 const Cardlist = ({ cardlist }) => {
-    
+
     return (
         <>
-           
-        <div className='card-grid'>
-            {cardlist.map(card => {
-                return <Card card={card} key={card.id} />; //key koristimo da ne  bi renderovao ono sto vec jeste
-            })}
+
+            <div className='card-grid'>
+                {cardlist.map(card => {
+                    return <Card card={card} key={card.id} />; //key koristimo da ne  bi renderovao ono sto vec jeste
+                })}
             </div>
 
-            </>
+        </>
     );
 };
 

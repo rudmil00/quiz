@@ -12,7 +12,7 @@ const About = () => {
         </style>
       </head>
       <body>
-        <h1>About Page</h1>
+
         <div className='about'>
 
 
@@ -21,7 +21,7 @@ const About = () => {
               Making everyone who likes FlashCards unstoppable
             </p>
             <p>We believe that anyone can learn anything. All it takes is a tenacious spirit,
-              the right guidance, and the tools to see it through. We know thatone who likes FlashCardss are under
+              the right guidance, and the tools to see it through. We know that one who likes FlashCards are under
               more pressure than ever. It can leave them overwhelmed, be anxiety-producing and make it all too easy to burn out.
 
               It’s our job to give everyone who likes FlashCards the tools and confidence to succeed, no matter what their motivation, or what they’re striving to achieve.

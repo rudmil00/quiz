@@ -136,24 +136,28 @@
 .forma{
   margin-top: 1%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(255, 255, 255);
   padding: 0 1.5rem;
+  height: 20vh;
 
 }
 .form-group {
   margin: .5rem;
   display: flex;
   flex-direction: column;
+  font-size: large;
 }
 
 .btn {
   background-color: hsl(400,100,10);
+  font-size: large;
   color: rgb(20, 19, 19);
   padding: .5em 1em;
-  border-radius: .3em;
+
+  margin: .5rem;
   
 }
 
