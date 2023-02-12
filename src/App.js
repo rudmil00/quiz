@@ -4,13 +4,15 @@ import React, { useState, useEffect } from 'react';
 import Cardlist from './components/Cardlist';
 import axios from 'axios';
 import he from 'he';
-
+import NavBar from './components/NavBar';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from './components/About.jsx';
 
 function App() {
 
   useEffect(() => {
     axios
-      .get('https://opentdb.com/api.php?amount=50')
+      .get('https://opentdb.com/api.php?amount=50&category=21')
       .then(res => {
         console.log(res.data);
         setCardlist(res.data.results.map((questionItem, index) => {
@@ -28,38 +30,28 @@ function App() {
   }, []);
 
   const SAMPLE_CARDS = [
-    {
-      id: 1,
-      question: 'Tekst pitanja 1',
-      answer: 'odgovor1',
-      options: [
-        'a',
-        'b',
-        'c',
-        'd'
-      ]
-    },
-
-    {
-      id: 2,
-      question: 'Tekst pitanja 2',
-      answer: 'odgovor2',
-      options: [
-        'a',
-        'b',
-        'c',
-        'd'
-      ]
-    }
 
 
   ];
   const [cardlist, setCardlist] = useState(SAMPLE_CARDS);
   return (
-    <div className='container'>
+    <BrowserRouter>
+      <NavBar />
+      <div className='container'>
+        <Routes>
+          <Route
+            path="/"
+            element={<Cardlist cardlist={cardlist} />}
 
-      <Cardlist cardlist={cardlist} />
-    </div>
+          />
+          <Route
+            path="/about"
+            element={<About />}
+
+          />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 
 
