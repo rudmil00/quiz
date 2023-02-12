@@ -7,12 +7,13 @@ import he from 'he';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from './components/About.jsx';
+import HeroSection from './components/HeroSection';
 
 function App() {
 
   useEffect(() => {
     axios
-      .get('https://opentdb.com/api.php?amount=50&category=21')
+      .get('https://opentdb.com/api.php?amount=30&category=21')
       .then(res => {
         console.log(res.data);
         setCardlist(res.data.results.map((questionItem, index) => {
@@ -37,6 +38,7 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
+
       <div className='container'>
         <Routes>
           <Route
